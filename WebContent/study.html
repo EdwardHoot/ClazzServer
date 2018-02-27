@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/all.css">
+    <script src="http://how2j.cn/study/js/jquery/2.0.0/jquery.min.js"></script>
+    <link href="http://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+    <script src="http://how2j.cn/study/js/bootstrap/3.3.6/bootstrap.min.js"></script>
+    <script src="js/study.js"></script>
+  </head>
+<body>
+<a href="top"></a>
+<div class="public-header clearfloat">
+  <div class="public-container">
+    <div class="logo"></div>
+    <p class="logo-info">Class System-学习中心</p>
+    <ul>
+      <li class="item"><a class="login" href=""><div class="login-img"></div><span class="username" id="user">用户</span></a></li>
+      <li class="item"><a href="information.html">信息中心</a></li>
+      <li class="item"><a href="message.html">通知中心</a></li>
+      <li class="item"><a href="life.html">生活管理</a></li>
+      <li class="item"><a href="entertainment.html">文体中心</a></li>
+      <li class="item"><a href="study.html">学习中心</a></li>
+      <li class="item"><a href="main.html">首页</a></li>
+    </ul>
+  </div>
+</div>
+<div class="login">
+    <div class="login-container">
+    <ul class="nav nav-tabs">
+    <li role="presentation" id="study"><a href="study.html">文件管理</a></li>
+    <li role="presentation" id="scholar"><a href="stu_scholar.html">奖评中心</a></li>
+    <!-- <li role="presentation"><a href="#">Android</a></li> -->
+  </ul>
+      <div class="aside-left">
+        <div class="panel panel-success aside-left-center">
+          <div class="panel-heading">资料上传</div>
+          <div class="panel-body">
+            <!-- <form name="f1" id="f1" action="uploadAction" method="post" enctype="multipart/form-data"> -->
+            <form name="f1" id="f1"  enctype="multipart/form-data">
+              <table class="study-table">
+                <tr>
+                  <td>请输入您上传文件的类别:</td>
+                  <td><input type="text" name="type"  class="form-control"></td>
+                </tr>
+                <tr>
+                  <td>请选择文件:</td>
+                  <td><input type="file" name="upload"></td>
+                </tr>
+
+                <tr>
+                  <td></td><td><input type="submit" value="上传" id="upload"></td>
+                </tr>
+              </table>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="aside-right">
+        <div class="panel panel-success">
+          <div class="panel-heading">资料下载</div>
+          <div class="panel-body">
+            <form action="downloadAction">
+              <div>
+                请输入要下载的文件名：<input type="text" name="name">
+              </div>
+              <input type="submit" name="" value="下载">
+            </form>
+            <button class="btn btn-primary allfile" data-toggle="modal" data-target="#myModal">
+  显示所有文件
+</button>
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          &times;
+        </button>
+        <h4 class="modal-title" id="myModalLabel">
+          所有文件
+        </h4>
+      </div>
+      <div class="modal-body">
+        <div class="panel panel-default ">
+        
+        <form id="loginForm">
+            <table class="table">
+              <thead>
+                 <th>文件名</th>
+                 <th>上传时间</th>
+                 <th>备注</th>
+              </thead>
+              <tbody id="file">
+<!--                  <tr>
+                    <td></td>  
+                    <td></td>  
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                 </tr>
+                 <tr>
+                    <td ></td>  
+                    <td ></td>  
+                    <td ></td>  
+                 </tr>
+                 <tr  class="info">
+                    <td></td>  
+                    <td></td>  
+                    <td></td>  
+                 </tr> -->
+              </tbody>
+            </table>
+        </form>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+        </button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal -->
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="footer">
+  <div class="footer-container">
+    <div class="footer-new-world"><p>@中科大软院</p></div>
+    <div class="back-to-top"><a href="#top">Back to top</a></div>
+  </div>
+</div>
+</body>
+</html>

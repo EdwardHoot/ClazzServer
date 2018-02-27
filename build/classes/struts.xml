@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.objectFactory" value="org.apache.struts2.spring.StrutsSpringObjectFactory" />
+	<package name="example" namespace="/" extends="struts-default">
+	<!-- <default-action-ref name="login"></default-action-ref> -->
+	<action name="stuSearch" class="stuSearch"/>
+	<action name="stuAll" class="stuAll"/>
+	<action name="teacherAll" class="teacherAll"/>
+	<action name="scholarshipAll" class="scholarshipAll"/>
+	
+	
+	<action name="teacher" class="teacher"/>
+	<action name="student" class="student"/>
+	<action name="login" class="login"/>
+	<action name="stuLogin" class="stuLogin"/><!-- 学生登录 -->
+	<action name="stuInfo" class="stuInfo"/><!-- 修改学生信息 -->
+	<action name="stuPass" class="stuPass"/><!-- 修改学生密码 -->
+	<action name="teacherPass" class="teacherPass"/><!-- 修改老师密码 -->
+	<action name="teacherInfo" class="teacherInfo"/><!-- 修改老师信息-->
+	<action name="teacherLogin" class="teacherLogin"/><!-- 老师登录 -->
+	<action name="addStu" class="addStu"/><!-- 老师-添加学生 -->
+	<action name="deleteStu" class="deleteStu"/><!-- 删除-学生信息 -->
+	<action name="addTeacher" class="addTeacher"/><!-- 管理员-添加老师 -->
+	<action name="deleteTeacher" class="deleteTeacher"/><!--管理员- 删除老师 -->
+	<action name="addMessage" class="addMessage"/><!-- 学生-添加留言 -->
+	<action name="message" class="message"/><!-- 学生-查看留言 -->
+	<action name="deleteMessage" class="deleteMessage"/><!-- 学生-删除留言 -->
+	<action name="addClz" class="addClz"/><!-- 老师-添加班级 -->
+	<action name="deleteClz" class="deleteClz"/><!-- 老师-删除班级 -->
+	<action name="updateClz" class="updateClz"/><!-- 老师-修改班级 -->
+	<action name="adminLogin" class="adminLogin"/><!-- 管理员登录 -->
+	<action name="adminPass" class="adminPass"/><!-- 修改管理员密码 -->
+	<action name="updateAdmin" class="updateAdmin"/><!-- 修改管理员信息 -->
+	<action name="addSystem" class="addSystem"/><!-- 管理员-添加系统通知 -->
+	<action name="deleteSystem" class="deleteSystem"/><!-- 管理员-删除通知 -->
+	<action name="system" class="system"/><!-- 查看系统通知 -->
+	<action name="addClzNotice" class="addClzNotice"/><!-- 老师-添加班级通知 -->
+	<action name="deleteClzNotice" class="deleteClzNotice"/><!-- 老师-删除通知 -->
+	<action name="clzNotice" class="clzNotice"/><!--学生- 查看班级通知 -->
+	<action name="addScholarship" class="addScholarship"/><!-- 老师添加奖学金奖项 -->
+	<action name="awards" class="awards"/><!-- 老师评奖 -->
+	<action name="deleteScholarship" class="deleteScholarship"/><!-- 删除奖学金奖项 -->
+	<action name="addActivity" class="addActivity"/><!--老师-增加活动 -->
+	<action name="activity" class="activity"/><!-- 查看活动 -->
+	<action name="fee" class="fee"/><!-- 查看班费 -->
+	<action name="fileAction" class="fileAction"/><!-- 查看学习资料 -->
+	<action name="uploadAction" class="uploadAction"><!-- 上传文件 -->
+		<param name="savePath">/file</param>
+	</action>
+	
+	
+	<action name="downloadAction" class="downloadAction"><!-- 下载 -->
+		<result type="stream">
+			<param name="inputName">fileInputStream</param>
+			<param name="contentDisposition">attachement;fileName="${fileName}"</param>
+			<param name="contentType">application/octet-stream</param>
+			<param name="bufferSize">1024</param>
+		</result>
+	</action>
+	</package>
+</struts>    

@@ -1,0 +1,35 @@
+/*也可以用通配符代替，即*{}*/
+body,div,dl,dt,dd,ul,li,h1,h2,h3,h4,h5,h6,form,a,p,textarea{
+	margin: 0;
+	padding: 0;
+	font-family: 微软雅黑;
+}
+body{
+	height:100%;
+}
+
+/*前面不会出现点点点*/
+ol,ul,li{
+	list-style: none;
+}
+/*没有下划线、块状元素，给个颜色*/
+a{
+	text-decoration: none!important;
+	display: block;
+}
+/*清除图片hank*/
+img{
+	border:none;
+	display: block;
+}
+/*清除浮动*/
+.clearfloat{
+	zoom:1;
+}
+.clearfloat:after{
+	display: block;
+	clear: both;
+	content:"";
+	visibility: hidden;
+	height: 0;
+}

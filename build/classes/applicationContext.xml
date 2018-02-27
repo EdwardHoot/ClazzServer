@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop"  
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context" 
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd 
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+	http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context-2.5.xsd " >
+	
+	<!-- 	<aop:aspectj-autoproxy/> -->
+	<!-- <bean id="hibernateUtil" class="com.huangxi.util.HibernateUtil"/> -->
+	
+	<!-- <context:component-scan base-package="com.huangxi"/>  -->
+	<bean id="stuSearch" class="com.clazz.struts.action.StudentSearchAction">
+		<property name="service">
+			<ref bean="studentServiceImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="stuAll" class="com.clazz.struts.action.StudentAllAction">
+		<property name="service">
+			<ref bean="studentServiceImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="teacherAll" class="com.clazz.struts.action.TeacherAllAction">
+		<property name="service">
+			<ref bean="teacherServiceImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="scholarshipAll" class="com.clazz.struts.action.ScholarshipAllAction">
+		<property name="service1">
+			<ref bean="scholarshipServiceImpl"/>
+		</property>
+		<property name="service2">
+			<ref bean="studentServiceImpl"/>
+		</property>
+	</bean>
+	
+	
+	
+	
+	<bean id="teacher" class="com.clazz.struts.action.TeacherAction">
+		<property name="service">
+			<ref bean="teacherServiceImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="student" class="com.clazz.struts.action.StudentAction">
+		<property name="service">
+			<ref bean="studentServiceImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="login" class="com.clazz.struts.action.LoginAction">
+		<property name="service1">
+			<ref bean="studentServiceImpl"/>
+		</property>
+		<property name="service2">
+			<ref bean="teacherServiceImpl"/>
+		</property>
+	</bean>
+	
+	
+	<bean id="stuInfo" class="com.clazz.struts.action.StuInformationAction">
+		<property name="service">
+			<ref bean="studentServiceImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="stuPass" class="com.clazz.struts.action.StuPasswordAction">
+		<property name="service">
+			<ref bean="studentServiceImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="teacherInfo" class="com.clazz.struts.action.TeacherInfoAction">
+		<property name="service">
+			<ref bean="teacherServiceImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="teacherPass" class="com.clazz.struts.action.TeacherPasswordAction">
+		<property name="service">
+			<ref bean="teacherServiceImpl"/>
+		</property>
+	</bean>
+	
+	
+	<bean id="teacherLogin" class="com.clazz.struts.action.TeacherLoginAction">
+		<property name="service">
+			<ref bean="teacherServiceImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="addTeacher" class="com.clazz.struts.action.AddTeacherAction">
+		<property name="service">
+			<ref bean="teacherServiceImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="deleteTeacher" class="com.clazz.struts.action.DeleteTeacherAction">
+		<property name="service">
+			<ref bean="teacherServiceImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="addStu" class="com.clazz.struts.action.AddStudentAction">
+		<property name="service1">
+			<ref bean="studentServiceImpl"/>
+		</property>
+		<property name="service2">
+			<ref bean="clazzServiceImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="deleteStu" class="com.clazz.struts.action.DeleteStudentAction">
+		<property name="service">
+			<ref bean="studentServiceImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="stuLogin" class="com.clazz.struts.action.StudentLoginAction">
+		<property name="service">
+			<ref bean="studentServiceImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="fileAction" class="com.clazz.struts.action.FileAction">
+		<property name="service">
+			<ref bean="fileServiceImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="uploadAction" class="com.clazz.struts.action.FileUploadAction">
+		<property name="service">
+			<ref bean="fileServiceImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="downloadAction" class="com.clazz.struts.action.FileDownloadAction">
+	</bean>
+	
+	<bean id="addMessage" class="com.clazz.struts.action.AddMessageAction">
+		<property name="service">
+			<ref bean="messageServiceImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="deleteMessage" class="com.clazz.struts.action.DeleteMessageAction">
+		<property name="service">
+			<ref bean="messageServiceImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="message" class="com.clazz.struts.action.MessageAction">
+		<property name="service">
+			<ref bean="messageServiceImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="addClz" class="com.clazz.struts.action.AddClzAction">
+		<property name="service">
+			<ref bean="clazzServiceImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="deleteClz" class="com.clazz.struts.action.DeleteClzAction">
+		<property name="service">
+			<ref bean="clazzServiceImpl"/>
+		</property>
+	</bean>
+
+	<bean id="updateClz" class="com.clazz.struts.action.UpdateClzAction">
+		<property name="service">
+			<ref bean="clazzServiceImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="adminLogin" class="com.clazz.struts.action.AdminLoginAction">
+		<property name="service">
+			<ref bean="adminServiceImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="adminPass" class="com.clazz.struts.action.AdminPasswordAction">
+		<property name="service">
+			<ref bean="adminServiceImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="updateAdmin" class="com.clazz.struts.action.UpdateAdminAction">
+		<property name="service">
+			<ref bean="adminServiceImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="addSystem" class="com.clazz.struts.action.AddSystemAction">
+		<property name="service1">
+			<ref bean="systemServiceImpl"/>
+		</property>
+		<property name="service2">
+			<ref bean="adminServiceImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="deleteSystem" class="com.clazz.struts.action.DeleteSystemAction">
+		<property name="service">
+			<ref bean="systemServiceImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="system" class="com.clazz.struts.action.SystemAction">
+		<property name="service">
+			<ref bean="systemServiceImpl"/>
+		</property>
+	</bean>	
+	
+	<bean id="addClzNotice" class="com.clazz.struts.action.AddClzNoticeAction">
+		<property name="service1">
+			<ref bean="clzNoticeServiceImpl"/>
+		</property>
+		<property name="service2">
+			<ref bean="teacherServiceImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="deleteClzNotice" class="com.clazz.struts.action.DeleteClzNoticeAction">
+		<property name="service">
+			<ref bean="clzNoticeServiceImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="clzNotice" class="com.clazz.struts.action.ClzNoticeAction">
+		<property name="service">
+			<ref bean="clzNoticeServiceImpl"/>
+		</property>
+	</bean>	
+	
+	<bean id="addScholarship" class="com.clazz.struts.action.AddScholarshipAction">
+		<property name="service">
+			<ref bean="scholarshipServiceImpl"/>
+		</property>
+	</bean>	
+	
+	
+	<bean id="awards" class="com.clazz.struts.action.AwardsAction">
+		<property name="service1">
+			<ref bean="scholarshipServiceImpl"/>
+		</property>
+		<property name="service2">
+			<ref bean="studentServiceImpl"/>
+		</property>
+	</bean>	
+	
+	<bean id="deleteScholarship" class="com.clazz.struts.action.DeleteScholarshipAction">
+		<property name="service1">
+			<ref bean="scholarshipServiceImpl"/>
+		</property>
+		<property name="service2">
+			<ref bean="studentServiceImpl"/>
+		</property>
+	</bean>	
+	
+	<bean id="addActivity" class="com.clazz.struts.action.AddActivityAction">
+		<property name="service1">
+			<ref bean="activityServiceImpl"/>
+		</property>
+		<property name="service2">
+			<ref bean="feeServiceImpl"/>
+		</property>
+	</bean>	
+	
+	<bean id="activity" class="com.clazz.struts.action.ActivityAction">
+		<property name="service">
+			<ref bean="activityServiceImpl"/>
+		</property>
+	</bean>	
+	
+	<bean id="fee" class="com.clazz.struts.action.FeeAction">
+		<property name="service">
+			<ref bean="feeServiceImpl"/>
+		</property>
+	</bean>	
+	
+	
+	<!-- ************************************************************************ -->
+	<bean id="adminServiceImpl" class="com.clazz.hibernate.service.AdminServiceImpl">
+		<property name="dao">
+			<ref bean="adminDaoImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="teacherServiceImpl" class="com.clazz.hibernate.service.TeacherServiceImpl">
+		<property name="dao">
+			<ref bean="teacherDaoImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="studentServiceImpl" class="com.clazz.hibernate.service.StudentServiceImpl">
+		<property name="dao">
+			<ref bean="studentDaoImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="fileServiceImpl" class="com.clazz.hibernate.service.FileServiceImpl">
+		<property name="dao">
+			<ref bean="fileDaoImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="clazzServiceImpl" class="com.clazz.hibernate.service.ClazzServiceImpl">
+		<property name="dao">
+			<ref bean="clazzDaoImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="messageServiceImpl" class="com.clazz.hibernate.service.MessageServiceImpl">
+		<property name="dao">
+			<ref bean="messageDaoImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="systemServiceImpl" class="com.clazz.hibernate.service.SystemServiceImpl">
+		<property name="dao">
+			<ref bean="systemDaoImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="clzNoticeServiceImpl" class="com.clazz.hibernate.service.ClzNoticeServiceImpl">
+		<property name="dao">
+			<ref bean="clzNoticeDaoImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="scholarshipServiceImpl" class="com.clazz.hibernate.service.ScholarshipServiceImpl">
+		<property name="dao">
+			<ref bean="scholarshipDaoImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="activityServiceImpl" class="com.clazz.hibernate.service.ActivityServiceImpl">
+		<property name="dao">
+			<ref bean="activityDaoImpl"/>
+		</property>
+	</bean>
+	
+	<bean id="feeServiceImpl" class="com.clazz.hibernate.service.FeeServiceImpl">
+		<property name="dao">
+			<ref bean="feeDaoImpl"/>
+		</property>
+	</bean>
+	
+	<!-- ************************************************************************ -->
+	<bean id="adminDaoImpl" class="com.clazz.hibernate.dao.AdminDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean id="teacherDaoImpl" class="com.clazz.hibernate.dao.TeacherDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	
+	
+	<bean id="studentDaoImpl" class="com.clazz.hibernate.dao.StudentDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean id="fileDaoImpl" class="com.clazz.hibernate.dao.FileDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean id="clazzDaoImpl" class="com.clazz.hibernate.dao.ClazzDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean id="messageDaoImpl" class="com.clazz.hibernate.dao.MessageDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean id="systemDaoImpl" class="com.clazz.hibernate.dao.SystemDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean id="clzNoticeDaoImpl" class="com.clazz.hibernate.dao.ClzNoticeDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean id="scholarshipDaoImpl" class="com.clazz.hibernate.dao.ScholarshipDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean id="activityDaoImpl" class="com.clazz.hibernate.dao.ActivityDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean id="feeDaoImpl" class="com.clazz.hibernate.dao.FeeDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<!-- ************************************************************************ -->
+	
+	
+	<!-- 数据源 -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="username" value="root"/>
+		<property name="password" value="123"/>
+		<property name="url" value="jdbc:mysql://localhost:3306/clzserver1"/>
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+	</bean>
+
+
+	<!-- hibernate使用xml配置用 LocalSessionFactoryBean，如果是注解配置使用annotation.AnnotationSessionFactoryBean-->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean" destroy-method="destroy">
+		<property name="dataSource">
+			<ref bean="dataSource"/>
+		</property>
+		
+		<!-- 映射文件列表 -->
+		<property name="annotatedClasses">
+			<list>
+				<value>com.clazz.hibernate.bean.Fee</value>
+				<value>com.clazz.hibernate.bean.Activity</value>
+				<value>com.clazz.hibernate.bean.Scholarship</value>
+				<value>com.clazz.hibernate.bean.ClazzNotice</value>
+				<value>com.clazz.hibernate.bean.SystemNotice</value>
+				<value>com.clazz.hibernate.bean.Admin</value>
+				<value>com.clazz.hibernate.bean.Teacher</value>
+				<value>com.clazz.hibernate.bean.Student</value>
+				<value>com.clazz.hibernate.bean.Clazz</value>
+				<value>com.clazz.hibernate.bean.FileIndex</value>
+				<value>com.clazz.hibernate.bean.MessageBoard</value>
+			</list>
+		</property>
+		
+		<!-- hibernate属性 -->
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.show_sql">true</prop>			
+			</props>
+		</property>
+	</bean>
+	
+	<!-- 最简单的 基于Annotation事务管理 -->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource">
+			<ref bean="dataSource"/>
+		</property>
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+	
+	</beans>

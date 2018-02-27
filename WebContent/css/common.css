@@ -1,0 +1,15 @@
+.public-header{
+	height: 58px;
+}
+.public-container{
+	position: relative;
+	margin: 0 auto;
+/*	height: 100px;*/
+	width: 1280px;
+/*width: 1340;*/
+}
+/*.public-footer{
+	height: 58px;
+	padding-top: 100px;
+	background-color: #3b3b3b;
+}*/

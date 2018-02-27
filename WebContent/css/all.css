@@ -1,0 +1,283 @@
+.public-header .logo{
+	background:url("../imgs/logo.png");
+	float: left;
+	width: 31px;
+	height: 31px;
+	margin-top: 18px;
+	margin-left: 59px;
+}
+.public-header .logo-info{
+	font-size: 21px;
+	float: left;
+	margin-top: 18px;
+	color: #393a3a;
+}
+.item{
+	float: right;
+	margin-right: 50px;
+	margin-top: 17px;
+	font-size: 14px;
+	line-height: 38px;
+}
+.item a{
+	color:#787b83;
+}
+.item a:hover{
+	color: #e8504e;
+	border-bottom: 3px solid #e8504e;
+}
+.item .login-img{
+	width: 14px;
+	height: 17px;
+	background:url("../imgs/people.png");
+	float: left;
+	margin-top: 9px;
+	margin-right: 6px;
+}
+.item .login{
+	color:#e8504e;
+}
+
+.header-info-bg{
+	width: 1280px;
+	height: 687px;
+	background:url("../imgs/header-info-bg.png");
+	overflow: hidden;
+	z-index: 1;
+}
+.header-info-bg-Einfo{
+	z-index: 2;
+	position: absolute;
+	float: left;
+	margin-top:226px;
+	margin-left: 116px;
+	color: #ffffff;
+	font-size: 60px;
+}
+.header-info-bg-Cinfo{
+	z-index: 4;
+	font-size: 21px;
+	color: #ffffff;
+	margin-top: 310px;
+	margin-left: 126px;
+}
+.header-info-start{
+	z-index: 5;
+	width: 330px;
+	height: 60px;
+	background-color: #e8504e;
+	margin-left: 126px;
+	/*	margin-top: 70px;*/
+	margin-top: 70px;
+	text-align: center;
+}
+.header-info-start .start{
+	width: 330px;
+	height: 60px;
+	padding-top: 8px;
+	color: #ffffff;
+	font-size: 30px;
+	z-index: 6;
+}
+.classify-container{
+	position: relative;
+	width: 1290px;
+	height: 250px;
+	margin: 0 auto;
+}
+.classify .classify-info{
+	/*position: relative;*/
+	float: right;
+	width: 320px;
+	height: 246px;
+}
+.classify .classify-info .Clogo1{
+	background: url("../imgs/C1.png");
+	margin-left: 139px;
+	width: 42px;
+	height: 42px;
+	margin-top: 43px;
+}
+.classify .classify-info .Clogo2{
+	background: url("../imgs/C2.png");
+	width: 35px;
+	height: 40px;
+	margin-top: 43px;
+	margin-left: 143px;
+}
+.classify .classify-info .Clogo3{
+	background: url("../imgs/C3.png");
+	width: 35px;
+	height: 40px;
+	margin-top: 43px;
+	margin-left: 143px;
+}
+.classify .classify-info .Clogo4{
+	background: url("../imgs/C4.png");
+	width: 41px;
+	height: 40px;
+	margin-top: 43px;
+	margin-left: 140px;
+}
+.classify .classify-info .C-info{
+	margin-top: 43px;
+	margin-left: 82px;
+	width: 156px;
+	font-size: 14px;
+	color: #787b83;
+	text-align: center;
+}
+.classify .classify-info .line{
+	/*border-right: 10px solid #787b83;*/
+	/*float: right;*/
+	width: 2px;
+	height: 52px;
+	background-color: #787b83;
+	margin-top: -35px;
+}
+
+/*登录页面CSS*/
+.login-container{
+	position: relative;
+	width: 1280px;
+	/*height: 700px;*/
+	min-height:600px;
+	margin: 0 auto;
+	background-color: #edecec;
+}
+.login-panel{
+	position: absolute;
+	margin-top: 100px;
+	width: 280px;
+	margin-left: 500px;
+}
+.login-panel div{
+	float: left;
+	width: 200px;
+	margin-top: 10px;
+}
+.login-panel .label-item{
+	margin-top: 15px;
+	float: left;
+	width: 80px;
+}
+.login-panel button{
+	margin-top: 10px;
+	width: 280px;
+}
+.panel-container{
+	position: absolute;
+	left: 50%;
+	width: 640px;
+	margin-left:-320px;
+}
+/*页脚的CSS*/
+.footer-container{
+	position: relative;
+	width: 1280px;
+	height: 58px;
+	margin: 0 auto;
+	background-color: #2f3039;
+	/*position: absolute;*/
+	/*margin-left: 120px;*/
+	/*bottom: 0;*/
+	/*height: 58px;*/
+	/*width:1280px;*/
+}
+.footer-container .footer-new-world{
+	width: 80px;
+	height: 11px;
+	color: #ffffff;
+	font-size: 12px;
+	float: left;
+	margin-top: 29px;
+	margin-left: 100px;
+}
+.footer-container .back-to-top{
+	width: 80px;
+	height: 11px;
+	float: right;
+	margin-top: 29px;
+	margin-right: 100px;
+}
+.footer-container .back-to-top a{
+	width: 80px;
+	height: 11px;
+	color: #ffffff;
+	font-size: 12px;
+}
+/*information*/
+.mypanel{
+	margin-top:50px;
+}
+.info-edit{
+	/*display: none!important;*/
+	/*visibility: hidden;*/
+	/*display:none!important;*/
+}
+.person-info{
+	text-align: center;
+}
+#table-info tr td{
+	text-align: center;
+	vertical-align: middle!important;
+}
+.aside-left{
+	float:left;
+	width: 500px;
+	margin-left: 100px;
+	margin-top:200px;
+}
+.aside-right{
+	float:right;
+	width: 500px;
+	margin-right: 100px;
+	margin-top: 200px;
+}
+.study-table{
+	border:0;
+	border-collapse:separate;
+	border-spacing:10px
+}
+.stu-container{
+	position: absolute;
+	left: 50%;
+	width: 900px;
+	margin-left:-450px;
+}
+.side{
+	float: left;
+	width: 150px;
+	margin-top: 100px;
+	margin-left: 20px;
+}
+#CSS-search{
+	margin-top: 10px;
+}
+.mybottom div{
+	border-bottom: 1px solid rgb(49,112,143);
+}
+.side-board{
+	float: left;
+	width: 250px;
+	margin-top: 100px;
+	margin-left: 20px;
+}
+#info-body div{
+	border-bottom: 1px solid #d9edf7;
+}
+.stu_manage{
+	text-align: center;
+}
+.stu_manage_item{
+	margin-left: 30px !important;
+}
+.scholar{
+	width: 200px;
+	float: right;
+	margin-top: 100px;
+	margin-right: 20px;
+}
+.allfile{
+	float: right;
+}
